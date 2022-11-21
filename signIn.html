@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Вход</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="socialStyle.css">
+    <link rel="stylesheet" href="regStyle.css">
+    <link rel="stylesheet" href="signIn.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+    <header>
+        <section class="top-nav">
+            <div>
+                <div style="display:inline-block;vertical-align: middle; border-radius: 5px; height: 40px; overflow: hidden;">
+                    <img src="images/logo.jpg" alt="something's wrong..." width="40" height="40">
+                </div>
+                <div style="display:inline-block; height: 70px; vertical-align: middle;">
+
+                    <h1 id="headTitle"
+                        style="display:inline-block;font-family: Audiowide, sans-serif; vertical-align: middle;">Based Movie Characters</h1>
+                </div>
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li><a href="index.html">
+                        <div class="btn btn-two">Главная</div>
+                    </a></li>                
+                <li><a href="Bale.html">
+                        <div class="btn btn-two">К. Бейл</div>
+                    </a></li>
+                <li><a href="Pitt.html">
+                    <div class="btn btn-two">Б. Питт</div>
+                </a></li>
+                <li><a href="Gosling.html">
+                    <div class="btn btn-two">Р. Гослинг</div>
+                </a></li>
+                <li><a href="terms.html">
+                    <div class="btn btn-two">Словарь</div>
+                </a></li>
+                <li><a href="signIn.html">
+                        <div class="btn btn-two">Вход</div>
+                    </a></li>                
+            </ul>
+        </section>
+    </header>
+
+    <main>   
+
+        <div class="circle"></div>
+        <form action="" method="post">
+            <div class="register-form-container">
+                <h1 class="form-title">
+                    Вход
+                </h1>
+
+                <div class="form-field-mail">
+                    <input type="email" placeholder="Почта">
+                </div>
+                <div class="form-field-pswd">
+                    <input type="password" placeholder="Пароль">
+                </div>
+                <div class="form-buttons">
+                    <button class="button" type="submit">Вход</button>
+                    <div class="divider">Нет аккаунта?</div>
+                    <a href="reg.html" class="button button-or">Регистрация</a>
+                </div>
+            </div>
+        </form>
+        <div class="container" id="captcha_container">
+            <h3>Для начала докажи, что ты не репликант -<br>пройди капчу!</h3>
+            <div class="wrapper">
+                
+                <canvas id="canvas" width = "200" height="70"></canvas>
+                <button id="reload-button">
+                    <img src="images/rotate-right-solid.svg" height="32px" width="32px">
+                </button>
+            </div>
+            <input type="text" id="user-input" placeholder="Интерлинкд!">
+            <button id="submit-button">Отправить</button>
+            <script src="captcha.js"></script>
+        </div>
+        
+    </main>
+</body>
+
+<footer>      
+
+    <div>
+        <div class="social github" style="display: inline-block;">
+            <a href="https://github.com/Necromemeser" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+        </div>
+        <div class="social youtube" style="display: inline-block;">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
+        </div>
+        <div class="social whatsapp" style="display: inline-block;">
+            <a href="https://www.youtube.com/watch?v=4ewxmA7nL6w" target="_blank"><i class="fa fa-whatsapp fa-2x"></i></a>
+        </div>
+        <div class="social discord" style="display: inline-block;">
+            <a href="https://knowyourmeme.com/memes/discord-mods-please-keep-memes-out-of-general" target="_blank"><img src="images/discord.svg"></a>
+        </div>
+        <div class="social vk" style="display: inline-block;">
+            <a href="https://vk.com/wall-206284105_23722" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+        </div>
+    </div>
+
+    <address>
+        Точно наш телефон: <a href="tel:88005553535">88005553535</a></p>
+        Точно наша почта: <a href="mailto:ryangoslingoficial@mail.ru">ryangoslingoficial@mail.ru</a>
+    </address>
+
+    <p style="font-weight: bold; font-size:large;">О нас</p>
+    
+    <pre>Да нечего пока сказать.
+Просто энтузиаст, пишущий курсач
+вместо того, чтобы наслаждаться жизнью.</pre>
+    
+                 
+</footer>
+
+</html>

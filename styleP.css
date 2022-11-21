@@ -1,0 +1,43 @@
+body::before {
+    background: url(images/backgrounds/background_P.jpg) left / cover no-repeat;
+    filter: blur(7px) grayscale(20%);
+}
+
+.top-nav {
+    background: linear-gradient(to left, #a6c356, #298847);
+}
+
+footer {
+    background: linear-gradient(to bottom, #a6c356, #298847);
+}
+
+.social a {
+    color: black;
+    background: linear-gradient(to left, #a6c356, #298847);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 0%;
+
+}
+
+.grid-item__inner::before {
+    background: rgba(9, 85, 1, 0.8);
+}
+
+.like_container {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    background-color:  rgba(0, 92, 3, 0.8);
+}
+
+.like_container:hover {
+    color: #f50000;
+}
+
+.fas {
+    color: #f50000;
+    transition: .2s;
+}
+
+main article {
+    box-shadow: 0 8px 32px 0 rgba(0, 133, 7, 0.37);
+}

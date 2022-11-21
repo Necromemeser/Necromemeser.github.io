@@ -1,0 +1,55 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+.social a {
+    display: inline-block;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+
+    background: linear-gradient(to left, #f445ba, #cd49ee);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 0%;
+    transition: background-size .5s, color .5s;
+
+    border: 0 solid #ccc;
+
+    border-radius: 24px;
+    margin: 0 10px 10px 0;
+    
+    color: #000;
+
+    overflow: hidden;
+}
+
+.github a:hover {
+    background-size: 100% 100%;
+}
+
+.youtube a:hover {
+    background-size: 100% 100%;
+}
+
+.discord a:hover {
+    background-size: 100% 100%;
+}
+
+.vk a:hover {
+    background-size: 100% 100%;
+}
+
+.whatsapp a:hover {
+    background-size: 100% 100%;
+}
+
+a > i {
+    margin-top: 8px;
+}
+
+.social a:visited {
+    color: #000;
+} 
+
+.social a:visited:hover {
+    color: #fff;
+} 

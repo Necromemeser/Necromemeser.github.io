@@ -1,0 +1,44 @@
+.like_container {
+    
+    z-index: 5;
+    position: absolute;
+    margin: 5px;
+    
+    padding: 3px;
+    padding-top: 4px;
+    
+    width: 40px;
+    height: auto;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    background-color:  rgba(90, 34, 139, .8);
+    
+    margin-bottom: 100px;
+    visibility: hidden;
+    
+}
+
+.like_container i {
+    justify-self: right;
+    font-size: 32px;
+    transition: .1s all;
+}
+
+.like_container:hover {
+    color: #f50057;
+}
+
+.fas {
+    color: #f50057;
+    transition: .2s;
+}
+
+.grid-item__inner:hover .like_container {
+    transition: .3s all;
+    visibility: visible;
+}

@@ -1,0 +1,31 @@
+body::before {
+    background: url(images/backgrounds/background_G.jpg) left / cover no-repeat;
+    font-family: 'Raleway';
+}
+
+.top-nav {
+    background: linear-gradient(to left, #f445ba, #cd49ee);
+}
+
+footer {
+    background: linear-gradient(to bottom, #f445ba, #cd49ee);
+    overflow: hidden;
+    padding: 0;
+}
+
+.social a {
+    color: black;
+    background: linear-gradient(to left, #f445ba, #cd49ee);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 0%;
+   
+}
+
+main article {
+    box-shadow: 0 8px 32px 0 rgba(133, 0, 133, 0.37);
+}
+
+
+
+

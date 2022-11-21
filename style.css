@@ -1,0 +1,512 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700&subset=latin,cyrillic);
+
+body::before {
+  content: '';
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(3px);
+  box-sizing: border-box;
+
+
+  background: url(images/backgrounds/background_index.jpg) left / cover no-repeat;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Lora', serif;
+  overflow-x: hidden;
+}
+
+main {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+header {
+  display: grid;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-family: 'Lora', serif;
+}
+
+header>div {
+  position: relative;
+  bottom: 15px;
+  margin-left: 10px;
+}
+
+
+
+/*Меню-бургер*/
+
+
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+
+.top-nav {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+
+  font-family: 'Lora', serif;
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+  z-index: 10;
+}
+
+li>a {
+  text-decoration: none;
+}
+
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu>li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+/*Отвечает за контейнер с пунктами меню*/
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Скрывает чекбокс*/
+#menu-toggle {
+  display: none;
+}
+
+/*Отвечает за изображение кнопки*/
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+/*Верхняя "полоса" кнопки*/
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+/*Нижняя "полоса" кнопки*/
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+/*Проворачивает верхнюю "полосу" кнопки при нажатии на нее*/
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+/*Делает среднюю "полосу" кнопки полностью прозрачной при ее нажатии*/
+#menu-toggle:checked+.menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+/*Проворачивает нижнюю "полосу" кнопки при нажатии на нее*/
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+
+/*Отвечает за отображение меню-бургера*/
+@media (max-width: 1350px) {
+  .menu-button-container {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-toggle~.menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menu-toggle:checked~.menu li {
+    border: 1px solid #333;
+    height: 4.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menu>li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+
+  .menu>li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+
+
+@media (max-width: 430px) {
+  .top-nav h1 {
+    font-size: 16px;
+    margin-top: 24px;
+
+  }
+}
+
+@media (max-width: 650px) {
+
+  .top-nav img,
+  .top-nav div div {
+    display: none;
+    height: 0;
+
+  }
+}
+
+
+
+/*Красивые кнопочки*/
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 125px;
+  cursor: pointer;
+}
+
+/* 
+  ========================
+        BUTTON ONE
+  ========================
+  */
+.btn-one {
+  color: #222;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.btn-one span {
+  transition: all 0.3s;
+}
+
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: blue;
+  border-bottom-color: blue;
+  transform: scale(0.1, 1);
+}
+
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+
+.btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+/* 
+  ========================
+        BUTTON TWO
+  ========================
+  */
+.btn-two {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;
+  font-family: "Open Sans";
+
+}
+
+.btn-two span {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+/* 
+  ========================
+        BUTTON THREE
+  ========================
+  */
+.btn-three {
+  color: #222;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.btn-three::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.btn-three:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+
+.btn-three::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
+}
+
+.btn-three:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+footer a {
+  color: white;
+}
+
+
+footer {
+  width: 100%;
+  max-width: 100%;
+
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  align-items: center;
+  font-family: 'Lora', sans-serif;
+  height: 240px;
+    
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: 60px 30px 50px;
+  grid-template-areas:
+    ". . ."
+    ". Address Title"
+    "Social Address Info";
+}
+
+
+@media screen and (max-width: 800px) {
+  footer {
+    height: 500px;
+
+    grid-template-columns: auto;
+    grid-template-rows: 60px 100px 100px 50px 100px;
+    grid-template-areas:
+      "."
+      "Social"
+      "Address"
+      "Title"
+      "Info";
+
+
+  }
+}
+
+
+
+footer>div {
+  grid-area: Social;
+  padding-left: 5px;
+}
+
+footer address {
+  grid-area: Address;
+  padding-left: 5px;
+}
+
+footer p {
+  margin-left: 0;
+  text-align: justify;
+  grid-area: Title;
+  padding-left: 5px;
+}
+
+footer pre {
+
+  grid-area: Info;
+  padding-left: 5px;
+}
+
+p {
+  font-family: 'Lora', serif;
+  margin: 20px;
+  text-align: justify;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: pink;
+}
+
+p a:visited,
+div a:visited {
+  color: darkred;
+}
+
+.top-nav a:hover {
+  text-decoration: none;
+}
+
+main article {
+  overflow: hidden;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}

@@ -1,0 +1,85 @@
+main {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    justify-self: center;
+    margin: auto;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+body::before {
+    background: rgb(152, 152, 152);
+    font-family: 'Raleway';
+}
+
+.top-nav {
+    background: rgb(174, 174, 174);
+}
+
+footer {
+    background: rgb(174, 174, 174);
+}
+
+.social a {
+    background: linear-gradient(to left, #000000, #ffffff);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 0%;
+
+}
+
+.searchbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin-top: 40px;
+    width: 60%;
+    
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.searchbar input {
+    height: 25px;
+    width: 100%;
+    font-family: 'Lora', serif;
+    border-radius: 5px;
+}
+
+.termlist {
+    width: 50%;
+}
+
+.elastic li.hide {
+    display: none;
+}
+
+.elastic p.hide {
+    display: none;
+}
+
+mark {
+    background: whitesmoke;
+}
+
+.page {
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
+footer pre {
+    font-family: 'Lora', serif;
+}

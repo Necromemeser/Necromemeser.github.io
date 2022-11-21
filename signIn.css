@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+body::before {
+    background: url(images/backgrounds/background_reg.jpg) left / cover no-repeat;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+main div,
+main a {
+    color: black
+}
+
+input {
+    display: grid;
+
+
+    height: 45px;
+    width: 100%;
+    color: rgb(174, 124, 9);
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 5px;
+    padding-left: 25px;
+
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(170, 108, 15, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgb(230, 164, 12);
+    background-color: rgba(228, 165, 47, 0.607);
+}
+
+input::placeholder {
+    color: #fd9002;
+}
+
+.circle {
+    position: relative;
+    justify-self: center;
+    z-index: 1;
+    width: 2534px;
+    height: 2534px;
+
+    background: orange;
+    opacity: .6;
+    box-shadow: 0 4px 70px 6px rgb(108, 73, 6, .8);
+    border-radius: 50%;
+
+    animation-name: fadeCircle;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeCircle {
+    0% {
+        width: 2534px;
+        height: 2534px;
+    }
+
+    25% {
+        width: 2000px;
+        height: 2000px;
+    }
+
+    50% {
+        width: 1500px;
+        height: 1500px;
+    }
+
+    75% {
+        width: 1000px;
+        height: 1000px;
+    }
+
+    100% {
+        width: 534px;
+        height: 534px;
+    }
+}
+
+.form-title {
+
+    color: rgb(221, 164, 18);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 30px;
+}
+
+.register-form-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 45px 60px 60px 75px 75px;
+    grid-template-areas:
+        "Title"
+        "Mail"
+        "Pswd"
+        "Button";
+    grid-column-gap: 10px;
+    grid-row-gap: 6px;
+    position: relative;
+    z-index: 2;
+    max-width: 1500px;
+    
+    width: auto;
+
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    opacity: 0;
+
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(201, 141, 13, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    animation-name: fadeForm;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+.form-buttons {
+    grid-area: Button;
+
+}
+
+.form-title {
+
+    grid-area: Title;
+
+}
+
+.form-field-name {
+    grid-area: Name;
+    margin-bottom: 13px;
+}
+
+.form-field-pswd {
+    grid-area: Pswd;
+    margin-bottom: 13px;
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        font-size: 10px;
+    }
+
+}
+
+@keyframes fadeForm {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.button {
+    display: block;
+    height: 45px;
+    width: 100%;
+    background: rgb(230, 164, 12);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(139, 69, 0);
+}
+
+a.button {
+    text-decoration: none;
+    color: rgb(190, 175, 132);
+}
+
+.button-or {
+    background: #ffdd7e;
+    color: white;
+}
+
+.button-or:hover {
+    background: #ffe785;
+    color: white;
+}
+
+.divider {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    color: rgb(139, 69, 0);
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.social a {
+    display: inline-block;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+
+    background: linear-gradient(to left, #e4c248, #fd9002);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 0%;
+    transition: background-size .5s, color .5s;
+
+    border: 0 solid #ccc;
+
+    border-radius: 24px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+
+    overflow: hidden;
+}
+
+.top-nav {
+    background: linear-gradient(to left, #e4c248, #fd9002);    
+}
+
+.top-nav h1 {
+    padding-top: 20px;
+}
+
+
+
+
+
+
+@media (max-width: 650px) {
+    .top-nav h1 {
+        
+        padding-top: 24px;
+
+      }
+}
+
+@media (max-width: 430px) {
+    .top-nav h1 {        
+        padding-top: 0;
+      }
+}
+@media (max-width: 750px) {
+    .top-nav h1 {
+        font-size: 20px;
+    }
+}
+
+form {
+    position: absolute;
+    justify-self: center;
+    max-width: 750px;
+    width: 100%;
+}
+
+footer {
+    background: linear-gradient(to bottom, #ebae06, #fd7f02);
+}
+
+a > i {
+    margin-top: 2px;
+}
+
+a > img {
+    margin-top: 2px;
+}
+
+a:hover img {
+    transition: .5s;
+    filter: invert(1);
+}
+
+.container {
+    z-index: 4;
+    max-width: 750px;
+    width: 100%;
+    height: 460px;
+    padding: 5em;
+    border-radius: .6em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%;
+   
+    background: rgba(255, 255, 255, 0.815);
+    box-shadow: 0 8px 32px 0 rgba(201, 141, 13, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    opacity: 0;
+
+    animation-name: fadeForm;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+canvas {
+    border: 1px solid black;
+    border-radius: .4em;
+
+}
+
+button#reload-button {
+    font-size: 26px;
+    width: 4.6em;
+    background-color: orange;
+    border: none;
+    border-radius: .4em;
+    color: white;
+
+}
+
+input[type="text"] {
+    font-style: 1.05em;
+    width: 100%;
+    padding: 1em, .7em;
+    border: 1px solid black;
+    border-radius: .4em;
+
+}
+
+button#submit-button {
+    width: 100%;
+    background-color: orange;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    margin-top: 1em;
+    padding: .8em 0;
+    border-radius: .4em;
+}
+
+.container h3 {
+    color: orange;
+    font-family: "Lora", serif; 
+    text-align: center;
+}
+
+
+
